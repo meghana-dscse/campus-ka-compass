@@ -5,45 +5,90 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Campus ka Compass</title>
     <style>
-        body{
-            background-color: #CFC9C0;  
+        body {
+            background-color: #F0F0F0;  
             font-family: 'Poppins', sans-serif;
             text-align: center;
-            padding: 20px;
+            padding: 30px;
         }
-        img{
-            height: 200px;
-            width: 1600px;
-        }
-        h1,h4{
-            text-align: center;
+
+        h1, h4 {
             color: #533209; 
-                font-family: 'Quicksand', sans-serif;
-                font-weight: 600;
+            font-family: 'Quicksand', sans-serif;
+            font-weight: 600;
         }
+
+        img {
+            width: 100%;  /* Ensure the image spans the width of the screen */
+            max-height: 250px;  /* Limit the height */
+            object-fit: cover;  /* Keep aspect ratio intact */
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            font-size: 1.2rem;
+            color: #533209;
+        }
+
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            font-size: 1rem;
+            border: 2px solid #A0522D;
+            border-radius: 8px;
+        }
+
         .btn-custom {
-                background-color: #A0522D;
-                color: white;
-                padding: 10px 20px;
-                font-weight: 600;
-                border-radius: 8px;
-                display: inline-block;
-                text-decoration: none;
-            }
-            .btn-custom:hover {
-                background-color: #8B4513; 
-            }
+            background-color: #A0522D;
+            color: white;
+            padding: 12px 30px;
+            font-weight: 600;
+            border-radius: 8px;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 1.1rem;
+        }
+
+        .btn-custom:hover {
+            background-color: #8B4513;
+        }
+
+        .footer {
+            margin-top: 50px;
+            font-size: 0.9rem;
+            color: #8B4513;
+        }
     </style>
 </head>
 <body>
-    <image src="cbit header.png"></image>
-    <br><br><br>
-    <h1>CAMPUS KA COMPASS</h1><br><br>
-    <h4>Login to enter the page :</h4>
-    <form >
-        <label for="rollno"><h4>Enter you roll.no here</h4></label>
-        <input type="number" id="rollno" name="rollno"><br>
-    </form><br><br><br>
-    <a href="code1.html" target="_blank" class="btn btn-custom">Submit</a>
+    <img src="cbit header.png" alt="Campus Image">
+    
+    <div class="container">
+        <h1>CAMPUS KA COMPASS</h1><br>
+        <h4>Login to enter the page:</h4><br>
+
+        <form action="code1.html" method="GET">
+            <label for="rollno">Enter your roll number:</label><br>
+            <input type="number" id="rollno" name="rollno" required><br>
+
+            <a href="code1.html" target="_blank" class="btn-custom">Submit</a>
+        </form>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2025 Campus Ka Compass. All Rights Reserved.</p>
+    </div>
 </body>
 </html>
